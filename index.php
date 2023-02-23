@@ -33,7 +33,7 @@
             $content = $_POST["content"];
             //Validate length topic
             if (strlen($topic) < 4 || strlen($topic) > 140) {
-                $topicErr = "*Topic length must be between than 4 and 140";
+                $topicErr = "* Topic length must be between than 4 and 140";
             }
             //Validate Tags HTML
             if (strip_tags($topic) != $topic) {
@@ -41,7 +41,7 @@
             }
             //Validate length Content
             if (strlen($content) < 6 || strlen($content) > 20000) {
-                $contentErr = "*Content length must be between than 6 and 20000";
+                $contentErr = "* Content length must be between than 6 and 20000";
             }
         }
         if ($topicErr == "" && $contentErr == "") {
