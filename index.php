@@ -20,7 +20,6 @@
     <?php
     $topic = $content = $success =  "";
     $topicErr = $contentErr = "";
-    $length = 20000;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["topic"])) {
             $topicErr = "* Please enter the name topic";
