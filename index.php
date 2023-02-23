@@ -43,7 +43,7 @@
                 $contentErr = "* Content length must be between than 6 and 20000";
             }
         }
-        if ($topicErr == "" && $contentErr == "") {
+        if ($topicErr == "" && $contentErr == "" && !empty($_POST["topic"]) && !empty($_POST["content"])) {
             $success = "🔽 Post Successfully 🔽";
         }
     }
@@ -76,7 +76,7 @@
             </form>
     </section>
     <?php
-    if ($topicErr == "" && $contentErr == "") {
+    if ($topicErr == "" && $contentErr == "" && !empty($_POST["topic"]) && !empty($_POST["content"])) {
         require_once('blog.php');
     }
      ?>
